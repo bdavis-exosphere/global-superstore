@@ -11,5 +11,19 @@ sources:
       - name: global_superstore_pos_orders
 
 models:
+    - name: dim_customer
+      description: "Customer dimension"
+    - name: dim_customer_geography
+      description: "Customer geography dimension"
+    - name: dim_customer_region
+      description: "Customer region dimension"
     - name: dim_order
       description: "Order header dimension"
+    - name: dim_order_priority
+      description: "Order priority dimension"
+    - name: dim_ship_mode
+      description: "Shipment mode dimension"
+    - name: dim_product
+      description: "Product hierarchy dimension"
+    - name: fact_order_line
+      description: "Order line facts - sales, etc."
