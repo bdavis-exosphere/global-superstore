@@ -2,7 +2,7 @@
 version: 2
 
 sources:
-  - name: global_superstore_crm
+  - name: raw_global_superstore
     database: demo_raw_zone
     schema: global_superstore
     tables:
