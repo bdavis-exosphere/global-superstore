@@ -1,0 +1,10 @@
+{{ config(materialized='table') }}
+
+SELECT DISTINCT
+    ORDER_ID,
+    HASH(ORDER_ID) AS CHECKSUM,
+    'DEMO_RAW_ZONE.GLOBAL_SUPERSTORE.GLOBAL_SUPERSTORE'::VARCHAR(255) AS SOURCE_NAME,
+    CURRENT_TIMESTAMP AS DW_INSERT_TS,
+    CURRENT_TIMESTAMP AS DW_UPDATE_TS
+FROM 
+from {{ source('raw_device_temp', 'device_temp') }}

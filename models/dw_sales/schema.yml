@@ -1,0 +1,15 @@
+
+version: 2
+
+sources:
+  - name: global_superstore_crm
+    database: demo_raw_zone
+    schema: global_superstore
+    tables:
+      - name: global_superstore_crm
+      - name: global_superstore_product_master
+      - name: global_superstore_pos_orders
+
+models:
+    - name: dim_order
+      description: "Order header dimension"
