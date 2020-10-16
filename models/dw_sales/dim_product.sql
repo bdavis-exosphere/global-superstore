@@ -1,5 +1,5 @@
 select distinct
-    product_id || '-' || product_name as product_id,
+    product_id || '-' || product_name::varchar(255) as product_id,
     product_id as product_number,
     product_name::varchar(255) as product_name,
     substring(product_name, 1, position(' ', product_name)) as brand,
